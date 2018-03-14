@@ -7,15 +7,16 @@
 </div>
 <div>
   <input type="submit" value="Prijavite se" (click)="login($event)"/>
+
 </div>-->
 
 <div class="example-container">
   <mat-form-field>
-    <input type="text" matInput placeholder="Korisnicko ime" id="user123" name="username" >
+    <input type="text" matInput placeholder="Korisnicko ime" id="user123" name="username" [(ngModel)]="username">
   </mat-form-field>
 
   <mat-form-field>
-    <input type="password" matInput placeholder="Lozinka" id="pass123" name="password" >
+    <input type="password" matInput placeholder="Lozinka" id="pass123" name="password" [(ngModel)]="password">
   </mat-form-field>
 
   <button mat-button (click)="login($event)">Prijavite se</button>
