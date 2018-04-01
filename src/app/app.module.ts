@@ -8,28 +8,30 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
 import {CorpModule} from './corp/corp.module';
-import {HomeComponent} from './corp/home/home.component';
+//import {HomeComponent} from './corp/home/home.component';
+import { AppRoutesModule, routingComponents } from './app.routes';
+//import { ToolbarComponent } from './home/toolbar/toolbar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    //LoginComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
+    AppRoutesModule,
     FormsModule,
     MaterialModule,
-    CorpModule,
-    RouterModule.forRoot([
+    CorpModule
+    /*RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'home2', component: HomeComponent},
       {path: '', redirectTo: 'login', pathMatch: 'full'},
-      {path: '**', redirectTo: 'login', pathMatch: 'full'}
-    ]),
-    
-  ],
+      {path: '**', redirectTo: 'login', pathMatch: 'full'}*/
+    ],
 
   
   providers: [],

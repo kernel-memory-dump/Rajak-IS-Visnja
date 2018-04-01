@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$rajak-app-primary: mat-palette($mat-grey, 500);
+$rajak-app-accent: mat-palette($mat-cyan, A400, A100, A600);
+$rajak-app-warn: mat-palette($mat-red);
+
+$rajak-app-theme: mat-light-theme(
+    $rajak-app-primary, $rajak-app-accent, $rajak-app-warn);
+
+@include angular-material-theme($rajak-app-theme);
+
+.dark-theme {
+    $primary-dark: mat-palette($mat-pink, 800);
+    $accent-dark: mat-palette($mat-teal);
+    $warn-dark: mat-palette($mat-red);
+
+    $theme-dark: mat-dark-theme(
+        $primary-dark, $accent-dark, $warn-dark);
+
+    @include angular-material-theme($theme-dark);
+}
+

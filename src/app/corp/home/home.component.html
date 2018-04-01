@@ -1,3 +1,21 @@
-<p>
-  home works!
-</p>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" mat-elevation-z10>
+    <mat-toolbar>
+        
+        <mat-icon color="primary">Menu</mat-icon>
+  
+      </mat-toolbar>
+  
+      <mat-list role="list">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+
+  </mat-sidenav>
+
+  
+  <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+  
+</mat-sidenav-container>
