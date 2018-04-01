@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
 import {CorpModule} from './corp/corp.module';
-import {HomeComponent} from './corp/home/home.component';
+import {HomeComponent} from './corp/home/home.component'; // conflict!!!!
 
 
 
